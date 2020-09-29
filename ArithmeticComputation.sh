@@ -1,4 +1,4 @@
-##!/bin/bash -x
+#!/bin/bash -x
 echo "Arithmetic Computation & Sorting"
 echo "Enter three value for input : "
 read a
