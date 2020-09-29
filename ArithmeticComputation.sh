@@ -4,11 +4,12 @@ echo "Enter three value for input : "
 read a
 read b
 read c
-compute=$(awk 'BEGIN{print '$a' + '$b' * '$c'}')
-compute1=$(awk 'BEGIN{print '$a' * '$b' + '$c'}')
-compute2=$(awk 'BEGIN{print '$c' + '$a' / '$b'}')
-compute3=$(awk 'BEGIN{print '$a' % '$b' / '$c'}')
-echo "a + b * c = $compute"
-echo "a * b + c = $compute1"
-echo "c + a / b = $compute2"
-echo "a % b / c = $compute3"
+declare -A compute
+compute[0]=$(awk 'BEGIN{print '$a' + '$b' * '$c'}')
+compute[1]=$(awk 'BEGIN{print '$a' * '$b' + '$c'}')
+compute[2]=$(awk 'BEGIN{print '$c' + '$a' / '$b'}')
+compute[3]=$(awk 'BEGIN{print '$a' % '$b' / '$c'}')
+echo "a + b * c = ${compute[0]}"
+echo "a * b + c = ${compute[1]}"
+echo "c + a / b = ${compute[2]}"
+echo "a % b / c = ${compute[3]}"
