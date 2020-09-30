@@ -1,9 +1,7 @@
 ##!/bin/bash -x
 echo "Arithmetic Computation & Sorting"
 echo "Enter three value for input : "
-read a
-read b
-read c
+read a b c
 arr=()
 declare -A compute
 compute[0]=$(awk 'BEGIN{print '$a' + '$b' * '$c'}')
