@@ -1,7 +1,9 @@
 ##!/bin/bash -x
 echo "Arithmetic Computation & Sorting"
 echo "Enter three value for input : "
-read a b c
+read a
+read b
+read c
 arr=()
 declare -A compute
 compute[0]=$(awk 'BEGIN{print '$a' + '$b' * '$c'}')
@@ -22,6 +24,7 @@ for ((i=0;i<=${#d[@]};i++))
 do
         echo "${d[$i]}"
 done | sort -nr
+
 echo "Sort According Ascending Order :"
 for ((i=0;i<=${#d[@]};i++))
 do
